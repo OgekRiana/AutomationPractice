@@ -1,0 +1,153 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AutomationPractice-Suit" parallel="tests" thread-count="3">
+	<!-- 
+	<test name="Register Using Invalid Email Format">
+		<classes>
+			<class name="UserAuthentication.UserRegistration">
+				<methods>
+					<include name="openAuthenticationPage"></include>
+					<include name="regUsingInvalidEmailFormat"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!-- 
+	<test name="Register Using Valid Email Format">
+		<classes>
+			<class name="UserAuthentication.UserRegistration">
+				<methods>
+					<include name="openAuthenticationPage"></include>
+					<include name="regUsingValidEmail"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Register with Blank Input">
+		<classes>
+			<class name="UserAuthentication.UserRegistration">
+				<methods>
+					<include name="openAuthenticationPage"></include>
+					<include name="regUsingValidEmail"></include>
+					<include name="registerWithBlankInput"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Register Using Valid Data">
+		<classes>
+			<class name="UserAuthentication.UserRegistration">
+				<methods>
+					<include name="openAuthenticationPage"></include>
+					<include name="regUsingValidEmail"></include>
+					<include name="regUsingValidData"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Login Using Invalid Email Format">
+		<classes>
+			<class name="UserAuthentication.UserLogin">
+				<methods>
+					<include name="loginUsingInvalidEmailFormat"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	-->
+	
+	<!--	
+	<test name="Login Using Unregistered Email">
+		<classes>
+			<class name="UserAuthentication.UserLogin">
+				<methods>
+					<include name="loginUsingUnregisteredEmail"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Login Using Invalid Password">
+		<classes>
+			<class name="UserAuthentication.UserLogin">
+				<methods>
+					<include name="loginUsingInvalidPassword"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Login Using Valid Data">
+		<classes>
+			<class name="UserAuthentication.UserLogin">
+				<methods>
+					<include name="loginUsingValidData"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Reset Password">
+		<classes>
+			<class name="UserAuthentication.UserLogin">
+				<methods>
+					<include name="resetPassword"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!--
+	<test name="Searching Product">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="searchingProduct"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	-->
+	
+	<!-- THE FOLLOWING TEST REPRODUCE BUG BASED ON THE BUG ID 4 -->
+	<!--
+	<test name="Verify the Suggestion Result">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="verifySearchSuggestionResult"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!-- THE FOLLOWING TEST REPRODUCE BUG BASED ON THE BUG ID 3 -->
+	
+	<test name="Verify The Search Suggestion">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="verifySearchSuggestion"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

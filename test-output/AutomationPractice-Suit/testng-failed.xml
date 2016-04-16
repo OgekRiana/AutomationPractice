@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [AutomationPractice-Suit]" parallel="tests">
+  <test name="Verify The Search Suggestion(failed)" parallel="tests">
+    <classes>
+      <class name="ProductSearching.Searching">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="verifySearchSuggestion"/>
+        </methods>
+      </class> <!-- ProductSearching.Searching -->
+    </classes>
+  </test> <!-- Verify The Search Suggestion(failed) -->
+</suite> <!-- Failed suite [AutomationPractice-Suit] -->
