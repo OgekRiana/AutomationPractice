@@ -1,5 +1,46 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="AutomationPractice-Suit" parallel="tests" thread-count="3">
+
+	<!-- THE FOLLOWING TEST REPRODUCE INVALID SUGGESTION (BUG ID 3) -->
+	 
+	<test name="Verify The Search Suggestion">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="verifySearchSuggestion"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	
+	
+	<!-- THE FOLLOWING TEST REPRODUCE BUG: INVALID SUGGESTION RESULT (BUG ID 4) -->
+	<!--
+	<test name="Verify the Suggestion Result">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="verifySearchSuggestionResult"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!-- Searching Product from Search Box Top -->
+	<!--
+	<test name="Searching Product">
+		<classes>
+			<class name="ProductSearching.Searching">
+				<methods>
+					<include name="searchingProduct"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	-->
+
+	<!-- Register Using Invalid Email Format -->
 	<!-- 
 	<test name="Register Using Invalid Email Format">
 		<classes>
@@ -13,6 +54,7 @@
 	</test>
 	-->
 	
+	<!-- Register Using Valid Email -->
 	<!-- 
 	<test name="Register Using Valid Email Format">
 		<classes>
@@ -26,6 +68,7 @@
 	</test>
 	-->
 	
+	<!-- Register with Blank Input -->
 	<!--
 	<test name="Register with Blank Input">
 		<classes>
@@ -40,6 +83,23 @@
 	</test>
 	-->
 	
+	<!-- THE FOLLOWING TEST REPRODUCE BUG: ADDRESS LINE 2 DISAPPEAR (BUG ID 1) -->
+	<!-- 
+	<test name="Register with Blank Input">
+		<classes>
+			<class name="UserAuthentication.UserRegistration">
+				<methods>
+					<include name="openAuthenticationPage"></include>
+					<include name="regUsingValidEmail"></include>
+					<include name="registerWithBlankInput"></include>
+					<include name="regUsingValidData"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<!-- Registering User Using Valid Data -->
 	<!--
 	<test name="Register Using Valid Data">
 		<classes>
@@ -54,6 +114,7 @@
 	</test>
 	-->
 	
+	<!-- Login Using Invalid Email Format -->
 	<!--
 	<test name="Login Using Invalid Email Format">
 		<classes>
@@ -66,6 +127,7 @@
 	</test>	
 	-->
 	
+	<!-- Login Using Unregistered Email -->
 	<!--	
 	<test name="Login Using Unregistered Email">
 		<classes>
@@ -78,6 +140,7 @@
 	</test>
 	-->
 	
+	<!-- Login Using Invalid Password -->
 	<!--
 	<test name="Login Using Invalid Password">
 		<classes>
@@ -90,6 +153,7 @@
 	</test>
 	-->
 	
+	<!-- Login Using Valid Data -->
 	<!--
 	<test name="Login Using Valid Data">
 		<classes>
@@ -102,6 +166,7 @@
 	</test>
 	-->
 	
+	<!-- Reset User Password -->
 	<!--
 	<test name="Reset Password">
 		<classes>
@@ -114,40 +179,4 @@
 	</test>
 	-->
 	
-	<!--
-	<test name="Searching Product">
-		<classes>
-			<class name="ProductSearching.Searching">
-				<methods>
-					<include name="searchingProduct"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>	
-	-->
-	
-	<!-- THE FOLLOWING TEST REPRODUCE BUG BASED ON THE BUG ID 4 -->
-	<!--
-	<test name="Verify the Suggestion Result">
-		<classes>
-			<class name="ProductSearching.Searching">
-				<methods>
-					<include name="verifySearchSuggestionResult"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	-->
-	
-	<!-- THE FOLLOWING TEST REPRODUCE BUG BASED ON THE BUG ID 3 -->
-	
-	<test name="Verify The Search Suggestion">
-		<classes>
-			<class name="ProductSearching.Searching">
-				<methods>
-					<include name="verifySearchSuggestion"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
 </suite>

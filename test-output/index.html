@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-AutomationPractice-Suit">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AutomationPractice-Suit" title="ProductSearching.Searching" hash-for-method="verifySearchSuggestion">verifySearchSuggestion</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-AutomationPractice-Suit" title="ProductSearching.Searching" hash-for-method="verifySearchSuggestionResult">verifySearchSuggestionResult</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-AutomationPractice-Suit -->
@@ -125,16 +125,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySearchSuggestion">
-                  </a> <!-- verifySearchSuggestion -->
-                  <span class="method-name">verifySearchSuggestion</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at ProductSearching.Searching.verifySearchSuggestion(Searching.java:31)
+                  <a name="verifySearchSuggestionResult">
+                  </a> <!-- verifySearchSuggestionResult -->
+                  <span class="method-name">verifySearchSuggestionResult</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Search - My Store] but found [Printed Summer Dress - My Store]
+	at ProductSearching.Searching.verifySearchSuggestionResult(Searching.java:71)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 20 stack frames
+... Removed 22 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -150,15 +150,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;AutomationPractice-Suit&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;Verify The Search Suggestion&quot;&gt;
+  &lt;test name=&quot;Verify the Suggestion Result&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;ProductSearching.Searching&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifySearchSuggestion&quot;/&gt;
+          &lt;include name=&quot;verifySearchSuggestionResult&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- ProductSearching.Searching --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Verify The Search Suggestion --&gt;
+  &lt;/test&gt; &lt;!-- Verify the Suggestion Result --&gt;
 &lt;/suite&gt; &lt;!-- AutomationPractice-Suit --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +170,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Verify The Search Suggestion (1 class)</span>
+                <span class="test-name">Verify the Suggestion Result (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySearchSuggestion')
+data.setCell(0, 1, 'verifySearchSuggestionResult')
 data.setCell(0, 2, 'ProductSearching.Searching')
-data.setCell(0, 3, 2900);
+data.setCell(0, 3, 5601);
 window.suiteTableData['AutomationPractice-Suit']= { tableData: data, tableDiv: 'times-div-AutomationPractice-Suit'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-AutomationPractice-Suit">
               </div> <!-- times-div-AutomationPractice-Suit -->
             </div> <!-- times-div -->
@@ -228,7 +228,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">searchingProduct</span>
                 <br/>
-                <span class="ignored-method-name">verifySearchSuggestionResult</span>
+                <span class="ignored-method-name">verifySearchSuggestion</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -248,8 +248,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifySearchSuggestion</span>
-                <span class="method-start">17770 ms</span>
+                <span class="method-name">verifySearchSuggestionResult</span>
+                <span class="method-start">8224 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

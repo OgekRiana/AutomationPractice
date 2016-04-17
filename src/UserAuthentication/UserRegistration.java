@@ -13,10 +13,10 @@ public class UserRegistration extends BasePackage.BaseClass{
 	public Select date, month, year, state;
 	
 	public UserRegistration(){
-		this.firstname = "Ogek";
-		this.lastname = "Riana";
-		this.validemail = "iyamaailiadewi@gmail.com";
-		this.password = "lalayeyeye";
+		this.firstname = "Paimin";
+		this.lastname = "Pulgoso";
+		this.validemail = "paimin.pulgoso@gmail.com";
+		this.password = "paimin123";
 		this.datev = "16";
 		this.monthv ="12";
 		this.yearv = "1991";
@@ -33,8 +33,10 @@ public class UserRegistration extends BasePackage.BaseClass{
 	
 	@Test
 	public void openAuthenticationPage(){
-		
+		//Open the authentication page contain sign in and sign up form
 		driver.findElement(By.className("login")).click();
+		
+		//verify the title of authentication page
 		expected = "Login - My Store";
 		actual = driver.getTitle();
 		Assert.assertEquals(actual, expected);
@@ -42,9 +44,12 @@ public class UserRegistration extends BasePackage.BaseClass{
 	
 	@Test
 	public void regUsingInvalidEmailFormat(){
+		//Testing the email form validation
 		for(int i=0;i<email.length;i++){
 			driver.findElement(By.id("email_create")).sendKeys(email[i]);
 			driver.findElement(By.id("SubmitCreate")).submit();
+			
+			//displaying the error message
 			if(driver.findElement(By.xpath("//*[@id='create_account_error']/ol/li")).isDisplayed()){
 				System.out.println("email: "+email[i]+" | Error: "+driver.findElement(By.xpath("//*[@id='create_account_error']/ol/li")).getText());
 			}
@@ -53,17 +58,19 @@ public class UserRegistration extends BasePackage.BaseClass{
 	}
 	@Test
 	public void regUsingValidEmail(){
+		//register using valid email address
 		driver.findElement(By.id("email_create")).sendKeys(validemail);
 		driver.findElement(By.id("SubmitCreate")).submit();		
 	}
 	
 	@Test
-	public void regUsingValidData(){
+	public void regUsingValidData(){		
 		date = new Select(driver.findElement(By.id("days")));
 		month = new Select(driver.findElement(By.id("months")));
 		year = new Select(driver.findElement(By.id("years")));
 		state = new Select(driver.findElement(By.id("id_state")));
 		
+		//fill the fields on the registration form using valid data
 		driver.findElement(By.id("id_gender1")).click();
 		driver.findElement(By.id("customer_firstname")).sendKeys(firstname);
 		driver.findElement(By.id("customer_lastname")).sendKeys(lastname);
@@ -76,7 +83,7 @@ public class UserRegistration extends BasePackage.BaseClass{
 		driver.findElement(By.id("optin")).click();
 		driver.findElement(By.id("company")).sendKeys(comp);
 		driver.findElement(By.id("address1")).sendKeys(add1);
-		//driver.findElement(By.id("address2")).sendKeys(add2);
+		driver.findElement(By.id("address2")).sendKeys(add2);
 		driver.findElement(By.id("city")).sendKeys(city);
 		driver.findElement(By.id("postcode")).sendKeys(zip);
 		state.selectByValue(vstate);
@@ -84,6 +91,7 @@ public class UserRegistration extends BasePackage.BaseClass{
 		driver.findElement(By.id("phone")).sendKeys(mobile1);
 		driver.findElement(By.id("phone_mobile")).sendKeys(mobile2);
 		
+		//submit the registration form
 		driver.findElement(By.id("submitAccount")).click();	
 	}
 	
@@ -91,10 +99,11 @@ public class UserRegistration extends BasePackage.BaseClass{
 	public void registerWithBlankInput(){
 		state = new Select(driver.findElement(By.id("id_state")));
 		
+		//fill the fields on the registration form using invalid data
 		driver.findElement(By.id("id_gender1")).click();
 		driver.findElement(By.id("customer_firstname")).clear();
 		driver.findElement(By.id("customer_lastname")).clear();
-		driver.findElement(By.id("email")).clear();
+		//driver.findElement(By.id("email")).clear();
 		driver.findElement(By.id("passwd")).clear();
 		driver.findElement(By.id("newsletter")).click();
 		driver.findElement(By.id("optin")).click();
@@ -110,6 +119,7 @@ public class UserRegistration extends BasePackage.BaseClass{
 		driver.findElement(By.id("phone")).clear();
 		driver.findElement(By.id("phone_mobile")).clear();
 		
+		//submit the registration form and display the error message
 		driver.findElement(By.id("submitAccount")).click();
 		if(driver.findElement(By.xpath("//*[@id='center_column']/div")).isDisplayed()){
 			System.out.println("validation error: "+driver.findElement(By.xpath("//*[@id='center_column']/div")).getText());

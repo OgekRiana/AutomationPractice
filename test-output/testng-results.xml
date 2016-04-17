@@ -2,27 +2,29 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="AutomationPractice-Suit" duration-ms="20684" started-at="2016-04-16T15:50:28Z" finished-at="2016-04-16T15:50:49Z">
+  <suite name="AutomationPractice-Suit" duration-ms="13839" started-at="2016-04-17T00:16:00Z" finished-at="2016-04-17T00:16:14Z">
     <groups>
     </groups>
-    <test name="Verify The Search Suggestion" duration-ms="20684" started-at="2016-04-16T15:50:28Z" finished-at="2016-04-16T15:50:49Z">
+    <test name="Verify the Suggestion Result" duration-ms="13839" started-at="2016-04-17T00:16:00Z" finished-at="2016-04-17T00:16:14Z">
       <class name="ProductSearching.Searching">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:ProductSearching.Searching@31e5415e]" name="launchBrowser" is-config="true" duration-ms="17759" started-at="2016-04-16T23:50:28Z" finished-at="2016-04-16T23:50:46Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:ProductSearching.Searching@31e5415e]" name="launchBrowser" is-config="true" duration-ms="8212" started-at="2016-04-17T08:16:00Z" finished-at="2016-04-17T08:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="verifySearchSuggestion()[pri:0, instance:ProductSearching.Searching@31e5415e]" name="verifySearchSuggestion" duration-ms="2900" started-at="2016-04-16T23:50:46Z" finished-at="2016-04-16T23:50:49Z">
+        <test-method status="FAIL" signature="verifySearchSuggestionResult()[pri:0, instance:ProductSearching.Searching@31e5415e]" name="verifySearchSuggestionResult" duration-ms="5601" started-at="2016-04-17T08:16:09Z" finished-at="2016-04-17T08:16:14Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[expected [Search - My Store] but found [Printed Summer Dress - My Store]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [Search - My Store] but found [Printed Summer Dress - My Store]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at ProductSearching.Searching.verifySearchSuggestion(Searching.java:31)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at ProductSearching.Searching.verifySearchSuggestionResult(Searching.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -48,8 +50,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchSuggestion -->
+        </test-method> <!-- verifySearchSuggestionResult -->
       </class> <!-- ProductSearching.Searching -->
-    </test> <!-- Verify The Search Suggestion -->
+    </test> <!-- Verify the Suggestion Result -->
   </suite> <!-- AutomationPractice-Suit -->
 </testng-results>
