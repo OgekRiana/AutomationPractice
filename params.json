@@ -1,0 +1,6 @@
+{
+  "name": "Quick Start Selenium WebDriver",
+  "tagline": "Selenium Webdriver Project",
+  "body": "# What we need?\r\n1. Download dan install [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  \r\n2. Download \"Eclipse IDE for Java Developers\" [disini](http://www.eclipse.org/downloads/)\r\n3. Download Selenium Java Client Driver [disini](http://seleniumhq.org/download/)\r\n\r\n# What to do?\r\n##Configurasi Eclipse IDE dengan WebDriver\r\nBuatlah sebuah project java, tentukan nama dan lokasi penyimpanan project tersebut. Pada bagian JRE pilih \"Use an execution environment JRE\". Untuk project layout pilih \"Create separate forlders for sources and class file. Klik finish button.\r\n\r\nJava project telah berhasil dibuat selanjutnya adalah mengintegrasikan Selenium WebDriver. Klik kanan pada project yang telah dibuat kemudian pilih \"Properties\". Pada properties dialog pilih \"Java Build Path\" di sebelah kiri, kemudiah arahkan pada tab \"Libraries\". Klik \"Add External JARs..\" kemudian select semua file .jar yang ada pada Selenium Java Client Driver yang sudah diunduh sebelumnya. Klik \"Ok\" dan Java project dengan Selenium WebDriver siapa digunakan.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
